@@ -191,7 +191,7 @@ This setup wizard takes you through a few quick "one-off" steps to unlock Jenkin
 
 When you first access a new Jenkins instance, you are asked to unlock it using an automatically-generated password.
 
-1. Browse to http://localhost:9090(or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
+1. Browse to http://localhost:9090 (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
 
     ![image info](./img/setup-jenkins-01-unlock-jenkins-page.jpg)
     
