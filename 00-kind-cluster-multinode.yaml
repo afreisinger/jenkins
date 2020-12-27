@@ -1,7 +1,20 @@
 # three node (two workers) cluster config
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
+
+networking: #Optional
+  # WARNING: It is _strongly_ recommended that you keep this the default
+  # (127.0.0.1) for security reasons. However it is possible to change this.
+  apiServerAddress: "127.0.0.1" #Optional
+  # By default the API server listens on a random open port.
+  # You may choose a specific port but probably don't need to in most cases.
+  # Using a random port makes it easier to spin up multiple clusters.
+  apiServerPort: 6443 #Optional
+  podSubnet: "10.244.0.0/16" #Optional
+  serviceSubnet: "10.96.0.0/12" #Optional
+
 nodes:
 - role: control-plane
 - role: worker
 - role: worker
+  image: kindest/node:v1.19.1@sha256:98cf5288864662e37115e362b23e4369c8c4a408f99cbc06e58ac30ddc721600
